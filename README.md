@@ -2,47 +2,41 @@
 # Project Title
 
 Price Prediction Challenge — A Real World Case Study Using Machine Learning
-
-
+## Blog
+Blog describing this case study in detail : https://medium.com/@harsha_vardhan/price-prediction-challenge-a-real-world-case-study-using-machine-learning-ce8a0697b795
 ## Business problem
 
-With thousands of tweets circulating per second in the Twitter(a social media platform where people share their opinions in text format), it is really hard to tell whether the sentiment behind the specific tweet will impact the world related to that tweet. Capturing sentiment in these times is very important because it changes the whole dimensions and decisions that are to be made. But what words actually leads to the sentiment description? If we somehow find those words,then when a tweet is about to be tweeted,we can check for these words and remove these words as per our required sentiment.In a way we are supposed to control the consequences before hand by adding or removing specific words from the tweet.
+Mercari is one of the Japan’s E Commerce platforms, which involves selling and purchasing of used/refurbished items.Whenever seller wants to sell an item on Mercari’s app,they want the seller to know what price does this item stands at.This helps the sellers to know the value of the item they are going to sell.
+As the price of an item depends on lot of features like brand of the item,what’s the condition of the item…it’s really hard for human to detail all these manually and decide the price of an item.To automate this process using Machine Learning,they created a challenge,where we have to predict the price of item that the seller is going to sell.We will be given the seller’s uploaded data like Item name,Item brand,Item condition..etc.Pertaining to that item and using this data,we have to predict the price of that item using Machine Learning, there by eliminating the human intervention.
 ## Machine learning problem
-we will be extracting the phrase from an given tweet that reflect the sentiment given for that sentence(tweet).For example:
+With the given details of an item, we have to predict it’s price.This problem can be treated as Regression task,where we have to find the trend of an given series of points using the past data of those points like price in this case.Given are the features of item like item name,item brand…etc. we are going to predict the price of item which follows the trend based on these features.
 
-sentence: ‘I really love her so much’
 
-sentiment: positive : ‘love her so much’
-
-sentence: ‘my teacher is bullying me’
-
-sentiment: negative : ‘bullying me’
-
-We have to extract phrases that contain the‘love’ and ‘bullying’ words from the given sentence based on the sentiment given.Here input to the machine learning model is a sentence and output is also a sentence,which is a part of input sentence.
+ 
 ## Business Constraints
 
-Maximize the jaccard score by correctly predicting the words.
-
-Try to provide some interpretability.
-
+Minimize the value of Root Mean Squared Logarithm Error.
 ## Steps followed
 
 1. Data description
 2. Exploratory Data Analysis : univariate and multi variate Analysis
-3. Modelling Approches
+3. Preprocessing
+4. Feature Engineering
+5. Modelling Approches
 4. Encoding
 5. Models:
-    1. LSTM character level
-    2. LSTM word level
-    3. Fine tuning Roberta
-    4. Many many LSTM
-6. Error Analysis
+    1. Ridge regression
+    2. SVM regression
+    3. Decision tree regression
+    4. Random forest regression
+    5. XGboost regression
+    6. Multi Layer perceptron
+    7. LSTM
+
 ## References
 
-https://www.kaggle.com/c/tweet-sentiment-extraction
+https://www.kaggle.com/c/mercari-price-suggestion-challenge/overview
 
-https://arxiv.org/pdf/1810.04805.pdf
+https://www.kaggle.com/lopuhin/mercari-golf-0-3875-cv-in-75-loc-1900-s
 
-https://huggingface.co/
-
-https://www.kaggle.com/c/tweet-sentiment-extraction/discussion
+https://www.kaggle.com/c/mercari-price-suggestion-challenge/discussion/50499
